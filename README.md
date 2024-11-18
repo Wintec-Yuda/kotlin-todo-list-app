@@ -14,14 +14,14 @@ A simple Android app built with **Jetpack Compose** for managing and keeping tra
 - **Material 3**: A modern component design using Material Design principles.
 
 ## 🖥️ Project Structure
-.
+```plaintext
 ├── MainActivity.kt          # Entry point of the application
 ├── TodoPage.kt              # The main page displaying the task list
 ├── TodoItemView.kt          # A composable for each individual task
 ├── TodoItem.kt              # Data model for a task
 └── themes
     └── Theme.kt             # App theme configuration
-.
+```
 
 ## 📂 Prerequisites
 
@@ -35,6 +35,7 @@ A simple Android app built with **Jetpack Compose** for managing and keeping tra
 ```bash
 git clone https://github.com/username/todo-list-app.git
 cd todo-list-app
+```
 
 2. Open the project in Android Studio:
    - Choose File > _Open..._ and select the project folder.
@@ -53,7 +54,7 @@ data class TodoItem(
     val task: String,
     val isDone: Boolean = false
 )
-
+```
 
 ## TodoPage Composable
 ```kotlin
@@ -105,7 +106,7 @@ fun TodoPage(modifier: Modifier = Modifier) {
         }
     }
 }
-
+```
 
 ## TodoItemView Composable
 ```kotlin
@@ -125,5 +126,5 @@ fun TodoItemView(todo: TodoItem, onCheckedChange: () -> Unit) {
         Text(text = todo.task)
     }
 }
-
+```
 

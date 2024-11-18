@@ -32,10 +32,10 @@ A simple Android app built with **Jetpack Compose** for managing and keeping tra
 ## 🚀 How to Run
 
 1. Clone the repository:
-.
+```bash
 git clone https://github.com/username/todo-list-app.git
 cd todo-list-app
-.
+
 2. Open the project in Android Studio:
    - Choose File > _Open..._ and select the project folder.
 3. Sync Gradle:
@@ -47,16 +47,16 @@ cd todo-list-app
 ## 📄 Core Code
 
 ## TodoItem Model
-.
+```kotlin
 data class TodoItem(
     val id: Int,
     val task: String,
     val isDone: Boolean = false
 )
-.
+
 
 ## TodoPage Composable
-.
+```kotlin
 @Composable
 fun TodoPage(modifier: Modifier = Modifier) {
     var todoList by remember { mutableStateOf(listOf<TodoItem>()) }
@@ -105,10 +105,10 @@ fun TodoPage(modifier: Modifier = Modifier) {
         }
     }
 }
-.
+
 
 ## TodoItemView Composable
-.
+```kotlin
 @Composable
 fun TodoItemView(todo: TodoItem, onCheckedChange: () -> Unit) {
     Row(
@@ -125,5 +125,5 @@ fun TodoItemView(todo: TodoItem, onCheckedChange: () -> Unit) {
         Text(text = todo.task)
     }
 }
-.
+
 
